@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
+# https://huggingface.co/mlx-community
+# https://github.com/ml-explore/mlx-examples/tree/main/llms#large-models
 from huggingface_hub import snapshot_download
+from langchain.llms.base import LLM
+from langchain.memory import ConversationBufferMemory, ConversationBufferWindowMemory, ConversationSummaryMemory
+from langchain.tools import Tool
+from typing import Optional, List, Any
 import mlx.core as mx
 import mlx_lm
 import mlx_lm.models
